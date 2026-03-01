@@ -1,0 +1,35 @@
+.product-table {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-table thead {
+  background: #212529;
+  color: white;
+}
+
+.product-table th,
+.product-table td {
+  padding: 14px;
+  vertical-align: middle;
+}
+
+.product-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.table-edit-btn {
+  background: #ffc107;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.table-delete-btn {
+  background: #dc3545;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
