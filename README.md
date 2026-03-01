@@ -1,16 +1,57 @@
-# React + Vite
+# Product Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-featured Product Management System built using React.  
+This project includes both **Admin Panel** and **User Panel**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+### 👤 User Panel
+- View All Products
+- Filter Products by Category (Electronics, etc.)
+- Product Grid Layout
+- Order Button
+- Responsive Design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🛠 Admin Panel
+- View All Products
+- Add New Products
+- Manage Product Stock
+- Separate Admin View
+- Real-time Product Display
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧰 Technologies Used
+
+- React JS
+- JavaScript (ES6)
+- Bootstrap 5
+- HTML5
+- CSS3
+
+---
+
+---
+
+## 🎯 Project Highlights
+
+✔ Clean UI using Bootstrap  
+✔ Reusable Components  
+✔ Dynamic Product Rendering  
+✔ Category Based Filtering  
+✔ Admin & User Separation  
+
+---
+
+## 👩‍💻 Author
+
+**Prerana Bendale**  
+MCA Graduate | Frontend Developer  
+
+
+---
+
+
+
