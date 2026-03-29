@@ -1,5 +1,6 @@
 import React from "react";
-import "./producttable.css";
+// import "./producttable.css";
+import "./ProductTable.css";
 
 const ProductTable = ({ products }) => {
   return (
