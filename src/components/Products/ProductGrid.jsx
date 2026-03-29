@@ -1,53 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Many_products from "../../Data/Many_products";
 import OrderModal from "../Products/OrderModal";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const ProductGrid = ({ role }) => {
 
   const { categoryName } = useParams();
+
+  const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  // ✅ Direct Many_products use kar rahe hain
-  const filteredProducts = Many_products.filter(
-    (product) => product.category === categoryName
+
+  useEffect(() => {
+    const storedProducts = JSON.parse(localStorage.getItem("products")) || [];
+    setProducts(storedProducts);
+  }, []);
+
+  const filteredProducts = products.filter(
+    (p) => p.category === categoryName
   );
 
   return (
     <div className="container py-5">
-      <h2 className="text-center mb-4">
-        {categoryName} Products
-      </h2>
+      <h2 className="text-center mb-4">{categoryName} Products</h2>
 
-      <div className="row g-4">
+      <div className="row">
         {filteredProducts.map((product) => (
-          <div key={product.id} className="col-md-4">
-            <div className="card shadow h-100 text-center p-3">
+          <div className="col-md-4 mb-4" key={product.id}>
+            <div className="card p-3 text-center">
 
-              <img
-                src={product.image}
-                alt={product.name}
-                style={{ height: "200px", objectFit: "cover" }}
-              />
+              <img src={product.image} height="150" alt={product.name} />
 
-              <h5 className="mt-3">{product.name}</h5>
-              <p className="text-primary fw-bold">₹ {product.price}</p>
+              <h5>{product.name}</h5>
+              <p>₹ {product.price}</p>
+              <p>Stock: {product.stock}</p>
 
-              <span className={
-                product.stock > 0
-                  ? "badge bg-success"
-                  : "badge bg-danger"
-              }>
-                {product.stock > 0
-                  ? `In Stock: ${product.stock}`
-                  : "Out of Stock"}
-              </span>
-
-              {role !== "admin" && (
+              {role === "admin" ? (
+                <p className="text-muted">Admin View</p>
+              ) : (
                 <button
-                  className="btn btn-dark mt-3 w-100"
-                  disabled={product.stock === 0}
+                  className="btn btn-dark"
                   onClick={() => setSelectedProduct(product)}
                 >
                   Order Now

@@ -12,10 +12,9 @@ const ProductCard = ({ product, products, setProducts }) => {
       <div className="col-md-4 mb-4">
         <div className="product-card">
 
-          {/* Product Image */}
+         
           <img src={product.image} alt={product.name} className="product-img" />
 
-          {/* Card Body */}
           <div className="product-body">
             <h6>{product.name}</h6>
             <p className="price">₹{product.price}</p>

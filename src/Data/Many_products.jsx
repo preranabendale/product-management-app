@@ -1,4 +1,4 @@
-import leno from "../assets/image/Lenovolap.webp"
+import leno from "../assets/image/lenovolap.webp"
 import dell from "../assets/image/delllp.jpg"
 import Anklet from "../assets/image/Anklet.jpg"
 import Blue from "../assets/image/Bluetooth Speaker.jpg"
